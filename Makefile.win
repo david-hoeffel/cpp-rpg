@@ -1,0 +1,60 @@
+# Project: RPG_DEVC
+# Makefile created by Dev-C++ 4.9.9.2
+
+CPP  = g++.exe
+CC   = gcc.exe
+WINDRES = windres.exe
+RES  = 
+OBJ  = Main.o Console/ConsoleLogger.o Characters/Joueur.o Areas/Area.o Areas/Appartement.o Areas/Bar.o Storylines/Storyline.o Storylines/Storyline0.o Storylines/Storyline1.o Item.o Characters/Personnage.o $(RES)
+LINKOBJ  = Main.o Console/ConsoleLogger.o Characters/Joueur.o Areas/Area.o Areas/Appartement.o Areas/Bar.o Storylines/Storyline.o Storylines/Storyline0.o Storylines/Storyline1.o Item.o Characters/Personnage.o $(RES)
+LIBS =   
+INCS = 
+CXXINCS = 
+BIN  = RPG_DEVC.exe
+CXXFLAGS = $(CXXINCS)  
+CFLAGS = $(INCS)  
+RM = rm -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before RPG_DEVC.exe all-after
+
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o "RPG_DEVC.exe" $(LIBS)
+
+Main.o: Main.cpp
+	$(CPP) -c Main.cpp -o Main.o $(CXXFLAGS)
+
+Console/ConsoleLogger.o: Console/ConsoleLogger.cpp
+	$(CPP) -c Console/ConsoleLogger.cpp -o Console/ConsoleLogger.o $(CXXFLAGS)
+
+Characters/Joueur.o: Characters/Joueur.cpp
+	$(CPP) -c Characters/Joueur.cpp -o Characters/Joueur.o $(CXXFLAGS)
+
+Areas/Area.o: Areas/Area.cpp
+	$(CPP) -c Areas/Area.cpp -o Areas/Area.o $(CXXFLAGS)
+
+Areas/Appartement.o: Areas/Appartement.cpp
+	$(CPP) -c Areas/Appartement.cpp -o Areas/Appartement.o $(CXXFLAGS)
+
+Areas/Bar.o: Areas/Bar.cpp
+	$(CPP) -c Areas/Bar.cpp -o Areas/Bar.o $(CXXFLAGS)
+
+Storylines/Storyline.o: Storylines/Storyline.cpp
+	$(CPP) -c Storylines/Storyline.cpp -o Storylines/Storyline.o $(CXXFLAGS)
+
+Storylines/Storyline0.o: Storylines/Storyline0.cpp
+	$(CPP) -c Storylines/Storyline0.cpp -o Storylines/Storyline0.o $(CXXFLAGS)
+
+Storylines/Storyline1.o: Storylines/Storyline1.cpp
+	$(CPP) -c Storylines/Storyline1.cpp -o Storylines/Storyline1.o $(CXXFLAGS)
+
+Item.o: Item.cpp
+	$(CPP) -c Item.cpp -o Item.o $(CXXFLAGS)
+
+Characters/Personnage.o: Characters/Personnage.cpp
+	$(CPP) -c Characters/Personnage.cpp -o Characters/Personnage.o $(CXXFLAGS)

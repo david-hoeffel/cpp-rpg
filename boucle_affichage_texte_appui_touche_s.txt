@@ -1,0 +1,18 @@
+#include <sstream>
+#include <conio.h>
+#define SAVE 115
+#include <windows.h>
+#include <iomanip>
+#include <sstream>
+
+while (!kbhit())
+{
+  if(kbhit())      
+  {  
+            car = getch();  
+            if(car == SAVE)
+            {
+                    cout << "oihouih" << endl;                                 
+            }
+  }
+}
